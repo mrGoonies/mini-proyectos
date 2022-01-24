@@ -1,9 +1,25 @@
 import UIKit
+    
+// Recibe una pregunta y la respuesta
+func game(q: String, a: String) {
+    print("""
+    *** Bienvenido al juego favorito de los adolecentes ***
+    
+        ++++++++ MAGIC 8 BALL ++++++++
+        
+        Pregunta:
+        \(q)
+        -----------------------
+        Respuesta:
+        \(a)
+        -----------------------
+    """)
+}
 
-// Geeneramos la respuesta para nuestro usuario
+// Generamos la respuesta para nuestro usuario
 func generatingResponse() -> String {
     var randomNumber = UInt8.random(in: 1...9) // se genera un número aleatorio
-    var answer: String = String()
+    var answer = String()
     
     switch randomNumber {
     case 1:
@@ -29,7 +45,7 @@ func generatingResponse() -> String {
 
 // Generamos una pregunta por medio de un arreglo
 func userQuestion() -> String{
-    let questions = ["¿Seré millonario?", "¿Soy fachero?", "¿Soy jóven?", "¿?"]
+    let questions = ["¿Seré millonario?", "¿Soy fachero?", "¿Soy jóven?"]
     let question = questions.randomElement()! // Almacena la pregunta aleatoria
     
     if !question.isEmpty {
@@ -48,8 +64,7 @@ func main() {
     let question = userQuestion()
     let answer = generatingResponse()
     
-    print("Pregunta del usuario: \(question)")
-    print("La respuesta es: \(answer)")
+    game(q: question, a: answer)
     
 }
 
