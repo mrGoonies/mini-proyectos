@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import kotlin.test.assertFailsWith
 
 // Instanciamos Scanner
 val scanner = Scanner(System.`in`)
@@ -11,21 +10,13 @@ class Calculator(name: String) {
     }
 
     // Métodos
-    fun add(num1: Int, num2: Int) {
-        println("El resultado de la suma es:\n${num1 + num2}")
-    }
+    fun add(num1: Int, num2: Int) = println("El resultado de la suma es:\n${num1 + num2}")
 
-    fun subtract(num1: Int, num2: Int) {
-        println("El resultado de la resta es:\n${num1 - num2}")
-    }
-
-    fun multiply(num1: Int, num2: Int) {
-        println("El resultado de la multiplicación es:\n${num1 * num2}")
-    }
-
-    fun divide(num1: Int, num2: Int) {
-        println("El resultado de la división es:\n${num1 / num2}")
-    }
+   	fun subtract(num1: Int, num2: Int) = println("El resultado de la resta es:\n${num1 - num2}")
+    
+    fun multiply(num1: Int, num2: Int) = println("El resultado de la multiplicación es:\n${num1 * num2}")
+    
+    fun divide(num1: Int, num2: Int) = println("El resultado de la división es:\n${num1 / num2}")
 
 }
 
@@ -57,12 +48,7 @@ fun menuApplication(): Int {
 
         input = scanner.nextInt()
 
-        if (input > 0 && input < 6) {
-            println("haz seleccionado una opción")
-            break
-        } else{
-            continue
-        }
+        if (input > 0 && input < 6) break else continue 
     }
 
     return input
