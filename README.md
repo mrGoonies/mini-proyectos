@@ -1,5 +1,5 @@
 # Mis pequeños proyectos
-En este repositorio se encuentras los proyectos que realizo tras finalizar un módulo de aprendizaje en las diferentes plataforma de aprendizaje en las cuales estoy inscrito.
+En este repositorio se encuentras los proyectos que realizo tras finalizar un módulo de aprendizaje en las diferentes plataforma de aprendizaje en las cuales estoy inscrito o también aplicar mis conocimientos en pequeños proyectos.
 
 ## Objetivos
 
